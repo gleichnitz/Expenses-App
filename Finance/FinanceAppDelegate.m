@@ -7,6 +7,10 @@
 //
 
 #import "FinanceAppDelegate.h"
+#import "SummaryViewController.h"
+#import "ItemViewController.h"
+#import "DetailViewController.h"
+#import "RecentItemsViewController.h"
 
 @implementation FinanceAppDelegate
 
@@ -18,6 +22,23 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
+    
+    // create different view controllers
+//    FinanceViewController *financeViewController = [[FinanceViewController alloc] init];
+//    [[self window] setRootViewController:financeViewController];
+
+    ItemViewController *itemViewController = [[ItemViewController alloc] init];
+    [itemViewController tableView].scrollEnabled = YES;
+    
+    RecentItemsViewController *recentItemsViewController = [[RecentItemsViewController alloc] init];
+    [recentItemsViewController tableView].scrollEnabled = YES;
+    
+    UINavigationController *navController = [[UINavigationController alloc]
+                                             initWithRootViewController:recentItemsViewController];
+    
+    [[self window] setRootViewController:navController];
+    
+    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;
