@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		201CD4391799E95E002398DB /* ExpenseItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 201CD4381799E95E002398DB /* ExpenseItem.m */; };
+		20424B52179F49FD00F21BC3 /* CategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 20424B51179F49FD00F21BC3 /* CategoryViewController.m */; };
 		20452867179E44BF00C143D5 /* 100.png in Resources */ = {isa = PBXBuildFile; fileRef = 2045285F179E44BF00C143D5 /* 100.png */; };
 		20452868179E44BF00C143D5 /* 120.png in Resources */ = {isa = PBXBuildFile; fileRef = 20452860179E44BF00C143D5 /* 120.png */; };
 		20452869179E44BF00C143D5 /* 144.png in Resources */ = {isa = PBXBuildFile; fileRef = 20452861179E44BF00C143D5 /* 144.png */; };
@@ -63,6 +64,8 @@
 /* Begin PBXFileReference section */
 		201CD4371799E95E002398DB /* ExpenseItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ExpenseItem.h; path = ../ExpenseItem.h; sourceTree = "<group>"; };
 		201CD4381799E95E002398DB /* ExpenseItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ExpenseItem.m; path = ../ExpenseItem.m; sourceTree = "<group>"; };
+		20424B50179F49FD00F21BC3 /* CategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryViewController.h; sourceTree = "<group>"; };
+		20424B51179F49FD00F21BC3 /* CategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryViewController.m; sourceTree = "<group>"; };
 		2045285F179E44BF00C143D5 /* 100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 100.png; sourceTree = "<group>"; };
 		20452860179E44BF00C143D5 /* 120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 120.png; sourceTree = "<group>"; };
 		20452861179E44BF00C143D5 /* 144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 144.png; sourceTree = "<group>"; };
@@ -201,6 +204,8 @@
 				201CD4381799E95E002398DB /* ExpenseItem.m */,
 				48A28AE6178F9ED6002C913F /* FinanceAppDelegate.h */,
 				48A28AE7178F9ED6002C913F /* FinanceAppDelegate.m */,
+				20424B50179F49FD00F21BC3 /* CategoryViewController.h */,
+				20424B51179F49FD00F21BC3 /* CategoryViewController.m */,
 				48C33E9B178FAD5200BE58CB /* ExpenseItemStore.h */,
 				48C33E9C178FAD5200BE58CB /* ExpenseItemStore.m */,
 				2078D0BE17984F4600A5E363 /* ExpenseTypePicker.h */,
@@ -373,6 +378,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20424B52179F49FD00F21BC3 /* CategoryViewController.m in Sources */,
 				48AE45B51795A1510097BC96 /* ReceiptViewController.m in Sources */,
 				48C33E91178FA76500BE58CB /* ItemViewController.m in Sources */,
 				48615BCD1799B2F9004D8987 /* RecentItemsViewController.m in Sources */,

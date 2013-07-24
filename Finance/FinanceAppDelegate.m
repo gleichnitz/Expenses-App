@@ -11,6 +11,7 @@
 #import "ItemViewController.h"
 #import "DetailViewController.h"
 #import "RecentItemsViewController.h"
+#import "CategoryViewController.h"
 
 @implementation FinanceAppDelegate
 
@@ -24,19 +25,37 @@
     // Override point for customization after application launch.
     
     // create different view controllers
-//    FinanceViewController *financeViewController = [[FinanceViewController alloc] init];
-//    [[self window] setRootViewController:financeViewController];
-
+    //    FinanceViewController *financeViewController = [[FinanceViewController alloc] init];
+    //    [[self window] setRootViewController:financeViewController];
+    
     ItemViewController *itemViewController = [[ItemViewController alloc] init];
     [itemViewController tableView].scrollEnabled = YES;
     
     RecentItemsViewController *recentItemsViewController = [[RecentItemsViewController alloc] init];
     [recentItemsViewController tableView].scrollEnabled = YES;
     
+    SummaryViewController *summaryViewController = [[SummaryViewController alloc] init];
+    
+    CategoryViewController *categoryViewController = [[CategoryViewController alloc] init];
+    
+    // the following lines of code are all related to the recentitemsviewcontroller
     UINavigationController *navController = [[UINavigationController alloc]
                                              initWithRootViewController:recentItemsViewController];
+    UITabBarItem *tbi = [navController tabBarItem];
+    // give it a label
+    [tbi setTitle:@"Recent"];
+    // create a uiimage from a file. this will use hypno@2x.png on retina dsplay devices
+    //   UIImage *i = [UIImage imageNamed:@"Time.png"];
+    // put that image on the tab bar item
+    //   [tbi setImage:i];
     
-    [[self window] setRootViewController:navController];
+    // done with code for recentitemsviewcontroller
+    
+    
+    UITabBarController *tabBarController = [[UITabBarController alloc] init];
+    [tabBarController setViewControllers:@[summaryViewController, navController, categoryViewController]];
+    
+    [[self window] setRootViewController:tabBarController];
     
     
     self.window.backgroundColor = [UIColor whiteColor];

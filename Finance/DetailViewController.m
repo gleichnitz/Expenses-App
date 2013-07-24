@@ -14,6 +14,8 @@
 #import "ReceiptStore.h"
 #import "ExpenseTypePicker.h"
 #import "ExpenseItemType.h"
+#import "RecentItemsViewController.h"
+#import "SummaryViewController.h"
 
 @interface DetailViewController ()
 {

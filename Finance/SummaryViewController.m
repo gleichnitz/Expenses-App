@@ -18,8 +18,19 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // Custom initialization
+        // get the tab bar item
+        UITabBarItem *tbi = [self tabBarItem];
+        
+        // give it a label
+        [tbi setTitle:@"Summary"];
+        
+        // create a uiimage from a file. this will use hypno@2x.png on retina dsplay devices
+        //   UIImage *i = [UIImage imageNamed:@"Time.png"];
+        
+        // put that image on the tab bar item
+        //   [tbi setImage:i];
     }
+    
     return self;
 }
 
