@@ -23,13 +23,27 @@
                             @"date":[self dateLabel]};
     
     //create horizontal visual format string
-    NSString *fmt = @"H:|-2-[vendor]-[date]-2-|";
+    NSString *fmt = @"H:[date]-5-|";
     
     //create constraings from this visual format string
     NSArray *constraints = [NSLayoutConstraint constraintsWithVisualFormat:fmt
                                                                    options:0
                                                                    metrics:nil
                                                                      views:names];
+    [[self contentView] addConstraints:constraints];
+    
+    constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-8-[value]"
+                                                          options:0
+                                                          metrics:nil
+                                                            views:names];
+    [[self contentView] addConstraints:constraints];
+    
+    constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"H:|-15-[vendor]"
+                                                          options:0
+                                                          metrics:nil
+                                                            views:names];
+    [[self contentView] addConstraints:constraints];
+    
     NSArray * (^constraintBuilder)(UIView *,float);
     constraintBuilder = ^(UIView *view, float height) {
         return @[
@@ -51,17 +65,25 @@
     };
     
     constraints = constraintBuilder([self dateLabel], 25);
+    constraints = constraintBuilder([self valueLabel], 20);
+    [[self contentView] addConstraints:constraints];
     
-    if (![[self vendorLabel].text isEqual: @"Label"]) {
-        fmt = @"V:|-5-[value(==20)]-[vendor(==15)]-1-|";
-        constraints = [NSLayoutConstraint constraintsWithVisualFormat:fmt
-                                                          options:NSLayoutFormatAlignAllLeft
+    constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:[vendor(==12)]-1-|"
+                                                          options:0
                                                           metrics:nil
                                                             views:names];
-        [[self contentView] addConstraints:constraints];
-    } else {
-        constraints = constraintBuilder([self vendorLabel], 25);
-    }
+    [[self contentView] addConstraints:constraints];
+    
+//    if (![[self vendorLabel].text isEqual: @"Label"]) {
+//        fmt = @"V:|-5-[value(==20)]-[vendor(==15)]-1-|";
+//        constraints = [NSLayoutConstraint constraintsWithVisualFormat:fmt
+//                                                          options:NSLayoutFormatAlignAllLeft
+//                                                          metrics:nil
+//                                                            views:names];
+//        [[self contentView] addConstraints:constraints];
+//    } else {
+//        constraints = constraintBuilder([self vendorLabel], 25);
+//    }
     
     [[self contentView] addConstraints:constraints];
 

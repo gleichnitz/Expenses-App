@@ -200,6 +200,8 @@
 
 - (void)save:(id)sender
 {
+    [[self view] endEditing:YES];
+
    // ExpenseItem *item = [self item];
 //    [item setValue:[[[self valueField] text] doubleValue]];
 //    [item setVendorName:[[self vendorField] text]];

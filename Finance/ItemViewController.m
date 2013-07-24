@@ -132,7 +132,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     //configure cell with item
     
     [[cell valueLabel] setText:[NSString stringWithFormat:@"$%.2f",[item value]]];
-    [[cell vendorLabel] setText:[item vendorName]];
+    
+    if ([[item vendorName] length] > 0) {
+        [[cell vendorLabel] setText:[item vendorName]];
+        [[cell vendorLabel] setHidden:NO];
+    } else {
+        [[cell vendorLabel] setHidden:YES];
+    }
     
     // converts NSDate to string of month day
     NSDate *date = [item dateStamp];
@@ -146,12 +152,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     NSArray *finalDate = [NSArray arrayWithObjects:[partsOfDate objectAtIndex:0], month, nil];
     NSString *finalString = [finalDate componentsJoinedByString:@" "];
     [[cell dateLabel] setText:finalString];
-
-    // before cells created
-//    [[cell textLabel] setText:(@"$%d at %@", [item value], [item vendorName])];
-//    if ([item vendorName]) {
-//        [[cell detailTextLabel] setText:[item vendorName]];
-//    }
     
     return cell;
 }

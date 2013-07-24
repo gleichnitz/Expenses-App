@@ -34,7 +34,7 @@
     [recentItemsViewController tableView].scrollEnabled = YES;
     
     UINavigationController *navController = [[UINavigationController alloc]
-                                             initWithRootViewController:recentItemsViewController];
+                                             initWithRootViewController:itemViewController];
     
     [[self window] setRootViewController:navController];
     

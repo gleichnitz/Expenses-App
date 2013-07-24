@@ -76,10 +76,12 @@
                                 bundle:nil];
     [[self tableView] registerNib:nib
            forCellReuseIdentifier:@"RecentItemCell"];
+    self.tableView.rowHeight = 50;
     
     self.view.backgroundColor = [UIColor purpleColor];
     self.view.opaque = NO;
     self.view.alpha = 0.3;
+
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -105,7 +107,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [[[ExpenseItemStore sharedStore] allItems] count];
+    if ([[[ExpenseItemStore sharedStore] allItems] count] < 50) {
+        return [[[ExpenseItemStore sharedStore] allItems] count];
+    } else {
+        return 50;
+    }
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -117,9 +123,13 @@
     RecentItemCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecentItemCell"];
     
     // Configure the cell with item
-    [[cell valueLabel] setText:[NSString stringWithFormat:@"%.2f", [item value]]];
-    if (![[cell vendorLabel] isEqual:@"Label"]) {
+    [[cell valueLabel] setText:[NSString stringWithFormat:@"$%.2f", [item value]]];
+    if ([[item vendorName] length] > 0) {
         [[cell vendorLabel] setText:[item vendorName]];
+        [[cell vendorLabel] setHidden:NO];
+    } else {
+//        [[cell vendorLabel] setText:@""];
+        [[cell vendorLabel] setHidden:YES];
     }
     [[cell categoryLabel] setText:[NSString stringWithFormat:@"%@", [[item expenseType] label]]];
     
