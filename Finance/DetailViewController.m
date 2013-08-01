@@ -252,9 +252,9 @@
 {
     [super viewWillAppear:animated];
     
-    self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
-    self.navigationController.navigationBar.opaque = NO;
-    self.navigationController.navigationBar.alpha = 0.7;
+   // self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
+   // self.navigationController.navigationBar.opaque = NO;
+   // self.navigationController.navigationBar.alpha = 0.7;
     
     ExpenseItem *item = [self item];
 //    [self vendorField].clearsOnBeginEditing = YES;
@@ -336,9 +336,9 @@
     }
 
     
-    self.view.backgroundColor = [UIColor purpleColor];
-    self.view.opaque = NO;
-    self.view.alpha = 0.3;
+   // self.view.backgroundColor = [UIColor purpleColor];
+   // self.view.opaque = NO;
+   // self.view.alpha = 0.3;
     
     UIToolbar* numberToolbar = [[UIToolbar alloc]initWithFrame:CGRectMake(0, 0, 320, 50)];
     numberToolbar.barStyle = UIBarStyleBlackTranslucent;

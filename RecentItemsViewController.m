@@ -24,9 +24,9 @@
     [super viewWillAppear:animated];
     [[self tableView] reloadData];
  
-    self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
-    self.navigationController.navigationBar.opaque = NO;
-    self.navigationController.navigationBar.alpha = 0.7;
+   // self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
+   // self.navigationController.navigationBar.opaque = NO;
+   // self.navigationController.navigationBar.alpha = 0.7;
 }
 
 - (IBAction)addNewItem:(id)sender
@@ -78,9 +78,9 @@
            forCellReuseIdentifier:@"RecentItemCell"];
     self.tableView.rowHeight = 50;
     
-    self.view.backgroundColor = [UIColor purpleColor];
-    self.view.opaque = NO;
-    self.view.alpha = 0.3;
+   // self.view.backgroundColor = [UIColor purpleColor];
+   // self.view.opaque = NO;
+   // self.view.alpha = 0.3;
 
 
     // Uncomment the following line to preserve selection between presentations.

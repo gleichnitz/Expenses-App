@@ -71,18 +71,18 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor purpleColor];
-    self.view.opaque = NO;
-    self.view.alpha = 0.3;
+   // self.view.backgroundColor = [UIColor purpleColor];
+   // self.view.opaque = NO;
+   // self.view.alpha = 0.3;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:YES];
     
-    self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
-    self.navigationController.navigationBar.opaque = NO;
-    self.navigationController.navigationBar.alpha = 0.7;
+   // self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
+   // self.navigationController.navigationBar.opaque = NO;
+   // self.navigationController.navigationBar.alpha = 0.7;
 }
 
 @end

@@ -22,9 +22,9 @@
     [super viewWillAppear:animated];
     [[self tableView] reloadData];
     
-    self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
-    self.navigationController.navigationBar.opaque = NO;
-    self.navigationController.navigationBar.alpha = 0.7;
+   // self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
+   // self.navigationController.navigationBar.opaque = NO;
+   // self.navigationController.navigationBar.alpha = 0.7;
 }
 
 - (IBAction)addNewItem:(id)sender
@@ -73,9 +73,9 @@
     [[self tableView] registerNib:nib
            forCellReuseIdentifier:@"CategoryItemCell"];
     
-    self.view.backgroundColor = [UIColor purpleColor];
-    self.view.opaque = NO;
-    self.view.alpha = 0.3;
+   // self.view.backgroundColor = [UIColor purpleColor];
+   // self.view.opaque = NO;
+   // self.view.alpha = 0.3;
     
     //self.navController.tintColor = [UIColor whiteColor];
 
