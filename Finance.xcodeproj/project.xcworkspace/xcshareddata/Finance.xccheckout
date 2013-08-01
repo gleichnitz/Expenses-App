@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>54C82007-F022-4EFD-BF98-92C077656555</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Finance</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>92625D9A-8824-4085-BEF9-3FD40B102B1A</key>
+		<string>https://github.com/gleichnitz/Expenses-App.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Finance.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>92625D9A-8824-4085-BEF9-3FD40B102B1A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/gleichnitz/Expenses-App.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>92625D9A-8824-4085-BEF9-3FD40B102B1A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>92625D9A-8824-4085-BEF9-3FD40B102B1A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Expenses-App</string>
+		</dict>
+	</array>
+</dict>
+</plist>
