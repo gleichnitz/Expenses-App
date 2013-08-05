@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CorePlot-CocoaTouch.h"
 
-@interface SummaryViewController : UIViewController
+@interface SummaryViewController : UIViewController <CPTPlotDataSource>
+{
+    CPTXYGraph * graph;
+    NSMutableArray *pieData;
+}
+
+@property(readwrite, retain, nonatomic) NSMutableArray *pieData;
+@property (nonatomic,retain) CPTXYGraph * graph;
 
 @end

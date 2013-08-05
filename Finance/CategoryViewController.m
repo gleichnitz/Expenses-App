@@ -22,17 +22,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        // get the tab bar item
-        UITabBarItem *tbi = [self tabBarItem];
-        
-        // give it a label
-        [tbi setTitle:@"Categories"];
-        
-        // create a uiimage from a file. this will use hypno@2x.png on retina dsplay devices
-        //   UIImage *i = [UIImage imageNamed:@"Time.png"];
-        
-        // put that image on the tab bar item
-        //   [tbi setImage:i];
+        // customization
     }
     
     return self;
@@ -40,12 +30,22 @@
 
 - (id)init
 {
-    return [super initWithStyle:UITableViewStyleGrouped];
+    self = [super initWithStyle:UITableViewStyleGrouped];
+    if (self) {
+        UINavigationItem *nav = [self navigationItem];
+        [nav setTitle:@"Categories"];
+    }
+    return self;
 }
+
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
-    return [self init];
+    self = [super initWithStyle:style];
+    if (self) {
+        // Custom initialization
+    }
+    return self;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -120,7 +120,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:YES];
+    [super viewWillAppear:animated];
     
    // self.navigationController.navigationBar.tintColor = [UIColor purpleColor];
    // self.navigationController.navigationBar.opaque = NO;

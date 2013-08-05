@@ -28,15 +28,11 @@
     //    FinanceViewController *financeViewController = [[FinanceViewController alloc] init];
     //    [[self window] setRootViewController:financeViewController];
     
-    ItemViewController *itemViewController = [[ItemViewController alloc] init];
-    [itemViewController tableView].scrollEnabled = YES;
+   // ItemViewController *itemViewController = [[ItemViewController alloc] init];
+   // [itemViewController tableView].scrollEnabled = YES;
     
     RecentItemsViewController *recentItemsViewController = [[RecentItemsViewController alloc] init];
     [recentItemsViewController tableView].scrollEnabled = YES;
-    
-    SummaryViewController *summaryViewController = [[SummaryViewController alloc] init];
-    
-    CategoryViewController *categoryViewController = [[CategoryViewController alloc] init];
     
     // the following lines of code are all related to the recentitemsviewcontroller
     UINavigationController *navController = [[UINavigationController alloc]
@@ -51,9 +47,27 @@
     
     // done with code for recentitemsviewcontroller
     
+    SummaryViewController *summaryViewController = [[SummaryViewController alloc] init];
+    UINavigationController *navControllerSum = [[UINavigationController alloc]
+                                                initWithRootViewController:summaryViewController];
+    navControllerSum.navigationBar.translucent = NO;
+    UITabBarItem *tbiSum = [navControllerSum tabBarItem];
+    // give it a label
+    [tbiSum setTitle:@"Summary"];
+    
+
+    CategoryViewController *categoryViewController = [[CategoryViewController alloc] init];
+    
+    UINavigationController *navControllerCat = [[UINavigationController alloc]
+                                                initWithRootViewController:categoryViewController];
+    navControllerCat.navigationBar.translucent = NO;
+    UITabBarItem *tbiCat = [navControllerCat tabBarItem];
+    // give it a label
+    [tbiCat setTitle:@"Categories"];
+    
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    [tabBarController setViewControllers:@[summaryViewController, navController, categoryViewController]];
+    [tabBarController setViewControllers:@[navControllerSum, navController, navControllerCat]];
     
     [[self window] setRootViewController:tabBarController];
     

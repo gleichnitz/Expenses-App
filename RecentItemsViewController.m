@@ -50,7 +50,7 @@
     self = [super initWithStyle:UITableViewStyleGrouped];
     if (self) {
         UINavigationItem *nav = [self navigationItem];
-        [nav setTitle:@"Recent"];
+        [nav setTitle:@"Recent Items"];
         UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                                                              target:self
                                                                              action:@selector(addNewItem:)];
